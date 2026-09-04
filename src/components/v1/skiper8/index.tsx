@@ -66,11 +66,11 @@ export const Preloader: React.FC<PreloaderProps> = ({
   const curveVariants = {
     initial: {
       d: initialPath,
-      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] as const },
     },
     exit: {
       d: targetPath,
-      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] as const, delay: 0.2 },
     },
   };
 
@@ -80,7 +80,7 @@ export const Preloader: React.FC<PreloaderProps> = ({
     },
     exit: {
       y: "-100%",
-      transition: { duration: 0.85, ease: [0.76, 0, 0.24, 1], delay: 0.15 },
+      transition: { duration: 0.85, ease: [0.76, 0, 0.24, 1] as const, delay: 0.15 },
     },
   };
 
