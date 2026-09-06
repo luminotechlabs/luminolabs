@@ -1,24 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Link001 } from "@/components/v1/skiper40";
-import { Mail, Phone, MapPin, Clock, ArrowUpRight, Send, Check } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ArrowUpRight } from "lucide-react";
+import { EnquiryForm } from "@/components/ui/enquiry-form";
 
 export const ContactSection = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    service: "Web Development",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   const contactInfo = [
     {
@@ -163,103 +151,11 @@ export const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="md:col-span-7"
           >
-            <div className="rounded-3xl border border-sage-200/70 bg-white p-7 shadow-sm">
-              {submitted ? (
-                <div className="py-12 text-center space-y-3">
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-sage-100 text-sage-700">
-                    <Check className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-xl font-bold text-sage-900">
-                    Message Received
-                  </h3>
-                  <p className="text-sm text-sage-600 max-w-sm mx-auto leading-relaxed">
-                    Thank you for reaching out. We have received your inquiry and our team will get back to you within 24 hours.
-                  </p>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setSubmitted(false)}
-                    className="mt-4"
-                  >
-                    Send another note
-                  </Button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <h3 className="text-base font-bold text-sage-900">
-                    Send us a note
-                  </h3>
-
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    <div>
-                      <label className="block text-xs font-medium text-sage-600 mb-1.5">
-                        Your Name
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Joseph Vijay"
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full rounded-2xl border border-sage-200 bg-sage-50/50 px-3.5 py-2.5 text-sm text-sage-900 placeholder:text-sage-400 focus:border-sage-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-300 transition-all"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-sage-600 mb-1.5">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="you@yourcompany.com"
-                        value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full rounded-2xl border border-sage-200 bg-sage-50/50 px-3.5 py-2.5 text-sm text-sage-900 placeholder:text-sage-400 focus:border-sage-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-300 transition-all"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-medium text-sage-600 mb-1.5">
-                      Service of Interest
-                    </label>
-                    <select
-                      value={form.service}
-                      onChange={(e) => setForm({ ...form, service: e.target.value })}
-                      className="w-full rounded-2xl border border-sage-200 bg-sage-50/50 px-3.5 py-2.5 text-sm text-sage-900 focus:border-sage-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-300 transition-all"
-                    >
-                      <option>Web Development</option>
-                      <option>Mobile App Development</option>
-                      <option>Digital Marketing &amp; SEO</option>
-                      <option>Social Media Architecture</option>
-                      <option>Full Retainer / Custom Project</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-medium text-sage-600 mb-1.5">
-                      Tell us about your project
-                    </label>
-                    <textarea
-                      rows={4}
-                      required
-                      placeholder="Briefly describe what you are building, timeline goals, or challenges you are facing..."
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full rounded-2xl border border-sage-200 bg-sage-50/50 px-3.5 py-2.5 text-sm text-sage-900 placeholder:text-sage-400 focus:border-sage-400 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-300 transition-all resize-y"
-                    />
-                  </div>
-
-                  <Button type="submit" size="default" className="w-full sm:w-auto">
-                    <span className="flex items-center gap-2">
-                      Send Message
-                      <Send className="h-3.5 w-3.5" />
-                    </span>
-                  </Button>
-                </form>
-              )}
-            </div>
+            <EnquiryForm
+              title="Send us a note"
+              subtitle="Have a project in mind, an existing product to revamp, or simply want to explore possibilities? We'd love to hear from you."
+              source="Home Contact Section"
+            />
           </motion.div>
         </div>
       </div>

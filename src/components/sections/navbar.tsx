@@ -15,9 +15,9 @@ import { Menu, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { name: "Services", href: "#services" },
-  { name: "Work", href: "#work" },
-  { name: "Contact", href: "#contact" },
+  { name: "Services", href: "/#services" },
+  { name: "Work", href: "/#work" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export const Navbar = () => {
@@ -65,7 +65,7 @@ export const Navbar = () => {
         {/* Desktop CTA */}
         <div className="hidden sm:block">
           <Button asChild size="sm" className="bg-sage-700 hover:bg-sage-800 text-white rounded-full">
-            <Link href="#contact">Start Project</Link>
+            <Link href="/#contact">Start Project</Link>
           </Button>
         </div>
 
@@ -109,7 +109,7 @@ export const Navbar = () => {
 
               <div className="pt-8 border-t border-sage-200/60">
                 <Button asChild size="lg" className="w-full justify-center bg-sage-700 text-white rounded-full">
-                  <Link href="#contact" onClick={() => setOpen(false)}>
+                  <Link href="/#contact" onClick={() => setOpen(false)}>
                     Start Project
                   </Link>
                 </Button>
