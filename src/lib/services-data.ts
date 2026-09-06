@@ -30,7 +30,7 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
   "web-development": {
     slug: "web-development",
     title: "Web Development",
-    badge: "Full-Stack Next.js & Modern Web",
+    badge: "Modern Full Stack Applications",
     shortDescription:
       "Static & dynamic Next.js applications tailored for speed. Server components, edge caching, the whole stack — built around how your users actually behave.",
     heroHeadline:
@@ -188,7 +188,7 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
   "mobile-app-development": {
     slug: "mobile-app-development",
     title: "Mobile App Development",
-    badge: "Native iOS & Android Architecture",
+    badge: "Native Android Applications",
     shortDescription:
       "Native-feeling iOS & Android builds. We care about the 60fps scroll, haptic feedback on confirm buttons, and offline resilience.",
     heroHeadline:
@@ -346,7 +346,7 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
   "digital-marketing": {
     slug: "digital-marketing",
     title: "Digital Marketing",
-    badge: "Algorithmic Growth & Revenue Engine",
+    badge: "High Conversion Digital Marketing",
     shortDescription:
       "SEO and data-driven algorithmic growth. Not the kind where we send you a PDF of vanity keyword rankings — the kind where revenue actually moves.",
     heroHeadline:
@@ -498,7 +498,7 @@ export const SERVICES_DATA: Record<string, ServiceDetail> = {
   "social-media-handling": {
     slug: "social-media-handling",
     title: "Social Media Handling",
-    badge: "Brand Presence & Culture Architecture",
+    badge: "Brand Presence & Modern digital leads",
     shortDescription:
       "Authentic brand presence and architecture. We build the system, not just the posts. We handle with care your business values and brand perception.",
     heroHeadline:
