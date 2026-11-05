@@ -50,7 +50,7 @@ export const Navbar = () => {
           href="/"
           className="text-base font-bold tracking-tight text-sage-900 transition-opacity hover:opacity-80"
         >
-          Luminolabs
+          Luminotechlabs
         </Link>
 
         {/* Desktop nav (Skiper UI animated links) */}
@@ -85,7 +85,7 @@ export const Navbar = () => {
               <div>
                 <div className="pt-2 pb-6 border-b border-sage-200/60">
                   <SheetTitle className="text-2xl font-bold tracking-tight text-sage-900">
-                    Luminolabs
+                    Luminotechlabs
                   </SheetTitle>
                 </div>
 

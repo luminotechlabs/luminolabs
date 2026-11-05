@@ -31,10 +31,10 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: ServicePageProps): Metadata {
   const service = SERVICES_DATA[params.slug];
-  if (!service) return { title: "Service Not Found — Luminolabs" };
+  if (!service) return { title: "Service Not Found — Luminotechlabs" };
 
   return {
-    title: `${service.title} — Luminolabs`,
+    title: `${service.title} — Luminotechlabs`,
     description: service.shortDescription,
   };
 }

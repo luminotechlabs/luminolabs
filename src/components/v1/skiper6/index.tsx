@@ -21,7 +21,7 @@ export interface HoverMemberProps {
 
 export const HoverMember: React.FC<HoverMemberProps> = ({
   items = [],
-  defaultName = "LUMINOLABS",
+  defaultName = "LUMINOTECHLABS",
   defaultDescription = "Digital craft for serious brands. No fluff, no corporate noise.",
   className,
 }) => {
@@ -57,12 +57,12 @@ export const HoverMember: React.FC<HoverMemberProps> = ({
       // Long titles: "MOBILE APP DEVELOPMENT" (22) and "SOCIAL MEDIA HANDLING" (21)
       return "text-[4.6vw] sm:text-[4.8vw] md:text-[5vw] lg:text-[5.2vw] tracking-tight";
     }
-    if (len > 12) {
+    if (len > 14) {
       // Medium titles: "DIGITAL MARKETING" (17) and "WEB DEVELOPMENT" (15)
       return "text-[5.8vw] sm:text-[6.2vw] md:text-[6.6vw] lg:text-[7vw] tracking-tight";
     }
-    // Default: "LUMINOLABS" (10)
-    return "text-[7.5vw] sm:text-[8vw] md:text-[8.5vw] lg:text-[9vw] tracking-tighter";
+    // Default: "LUMINOTECHLABS" (14)
+    return "text-[6.5vw] sm:text-[7vw] md:text-[7.6vw] lg:text-[8.2vw] tracking-tighter";
   };
 
   const fontSizeClass = getFontSizeClass(displayText.length);

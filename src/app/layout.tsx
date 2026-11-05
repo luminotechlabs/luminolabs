@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Luminolabs",
+  title: "Luminotechlabs",
   description:
     "Full-stack Next.js engineering and algorithmic growth for brands that build seriously.",
 };

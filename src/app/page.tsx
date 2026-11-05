@@ -12,7 +12,7 @@ import { Footer } from "@/components/sections/footer";
 
 const PRELOADER_WORDS = [
   "Welcome To",
-  "LuminoLabs",
+  "LuminoTechLabs",
   "Your Digital",
   "Solution Providers",
 ];

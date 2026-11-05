@@ -11,7 +11,7 @@ export interface PreloaderProps {
 const DEFAULT_WORDS = [
   "welcome",
   "to",
-  "luminolabs",
+  "luminotechlabs",
   "your digital",
   "solution providers",
 ];

@@ -6,7 +6,7 @@ export const Footer = () => {
       id="footer"
       className="w-full border-t border-sage-200/60 py-10 text-center"
     >
-      <p className="text-sm text-sage-500">Luminolabs &copy; 2026</p>
+      <p className="text-sm text-sage-500">Luminotechlabs &copy; 2026</p>
     </footer>
   );
 };

@@ -49,7 +49,7 @@ export const HeroSection = () => {
         >
           <HoverMember
             items={HERO_SERVICES}
-            defaultName="Luminolabs"
+            defaultName="Luminotechlabs"
             defaultDescription="Digital craft for serious brands. No fluff, no corporate noise."
             className="w-full"
           />
