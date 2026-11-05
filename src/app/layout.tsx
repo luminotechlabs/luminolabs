@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   title: "Luminotechlabs",
   description:
     "Full-stack Next.js engineering and algorithmic growth for brands that build seriously.",
+  icons: {
+    icon: [
+      { url: "/logo.png", type: "image/png" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

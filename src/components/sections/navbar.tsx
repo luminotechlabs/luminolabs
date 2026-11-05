@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Link001 } from "@/components/v1/skiper40";
 import { Button } from "@/components/ui/button";
@@ -48,9 +49,17 @@ export const Navbar = () => {
         {/* Logo */}
         <Link
           href="/"
-          className="text-base font-bold tracking-tight text-sage-900 transition-opacity hover:opacity-80"
+          className="flex items-center gap-2.5 text-base font-bold tracking-tight text-sage-900 transition-opacity hover:opacity-80"
         >
-          Luminotechlabs
+          <Image
+            src="/logo.png"
+            alt="Luminotechlabs Logo"
+            width={30}
+            height={30}
+            className="h-7 w-7 rounded-lg object-contain"
+            priority
+          />
+          <span>Luminotechlabs</span>
         </Link>
 
         {/* Desktop nav (Skiper UI animated links) */}
@@ -83,7 +92,14 @@ export const Navbar = () => {
             {/* side="full" covers the entire page on mobile */}
             <SheetContent side="full" className="flex flex-col justify-between p-8 sm:p-12 overflow-y-auto">
               <div>
-                <div className="pt-2 pb-6 border-b border-sage-200/60">
+                <div className="pt-2 pb-6 border-b border-sage-200/60 flex items-center gap-3">
+                  <Image
+                    src="/logo.png"
+                    alt="Luminotechlabs Logo"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 rounded-lg object-contain"
+                  />
                   <SheetTitle className="text-2xl font-bold tracking-tight text-sage-900">
                     Luminotechlabs
                   </SheetTitle>
