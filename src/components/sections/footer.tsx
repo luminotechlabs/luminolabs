@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -15,7 +16,16 @@ export const Footer = () => {
           height={28}
           className="h-7 w-7 rounded-md object-contain opacity-80"
         />
-        <p className="text-sm text-sage-500">Luminotechlabs &copy; 2026</p>
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-sage-500">
+          <span>Luminotechlabs &copy; 2026</span>
+          <span className="hidden sm:inline text-sage-300">&bull;</span>
+          <Link
+            href="/terms"
+            className="transition-colors hover:text-sage-800 underline-offset-4 hover:underline"
+          >
+            Terms &amp; Conditions
+          </Link>
+        </div>
       </div>
     </footer>
   );

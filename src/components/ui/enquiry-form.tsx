@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Send, Check, Loader2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { submitEnquiry } from "@/lib/appwrite";
@@ -177,24 +178,37 @@ export function EnquiryForm({
           />
         </div>
 
-        <Button
-          type="submit"
-          size="lg"
-          disabled={status === "submitting"}
-          className="w-full sm:w-auto rounded-full bg-sage-800 hover:bg-sage-900 text-white font-medium px-7 transition-all"
-        >
-          {status === "submitting" ? (
-            <span className="flex items-center gap-2">
-              <Loader2 className="h-4 w-4 animate-spin" />
-              <span>Submitting to Appwrite...</span>
-            </span>
-          ) : (
-            <span className="flex items-center gap-2">
-              <span>Send Enquiry</span>
-              <Send className="h-3.5 w-3.5" />
-            </span>
-          )}
-        </Button>
+        <div className="pt-1 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <Button
+            type="submit"
+            size="lg"
+            disabled={status === "submitting"}
+            className="w-full sm:w-auto rounded-full bg-sage-800 hover:bg-sage-900 text-white font-medium px-7 transition-all cursor-pointer"
+          >
+            {status === "submitting" ? (
+              <span className="flex items-center gap-2">
+                <Loader2 className="h-4 w-4 animate-spin" />
+                <span>Submitting to Appwrite...</span>
+              </span>
+            ) : (
+              <span className="flex items-center gap-2">
+                <span>Send Enquiry</span>
+                <Send className="h-3.5 w-3.5" />
+              </span>
+            )}
+          </Button>
+
+          <p className="text-[11px] text-sage-500 leading-normal">
+            By submitting, you agree to our{" "}
+            <Link
+              href="/terms"
+              target="_blank"
+              className="font-medium text-sage-700 underline underline-offset-2 hover:text-sage-900 transition-colors"
+            >
+              Terms &amp; Conditions
+            </Link>.
+          </p>
+        </div>
       </form>
     </div>
   );
